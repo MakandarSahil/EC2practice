@@ -278,10 +278,10 @@ const movies = [
   Storage: 8GB
     Key Pair: my-key.pem
     Configure Security Group
-  Allow:
-    Port 22 (SSH) – Your IP
-    Port 3000 (Custom TCP) – 0.0.0.0/0
-    Port 80 (optional for HTTP)
+     Allow:
+      Port 22 (SSH) – Your IP
+      Port 3000 (Custom TCP) – 0.0.0.0/0
+      Port 80 (optional for HTTP)
   SSH into EC2 instance
      chmod 400 my-key.pem
      ssh -i my-key.pem ubuntu@ec2-xx-xxx-xxx-xxx.us-east-2.compute.amazonaws.com
@@ -313,24 +313,24 @@ const movies = [
 
 2)Upload Frontend to S3
   Go to S3 Console → Create Bucket
-  Name: ec2practicefrontend
-  Uncheck: Block Public Access ✅
-  Upload index.html
-  Enable Static Website Hosting:
-  Index document: index.html
-  Set Bucket Policy to allow public access:
+    Name: ec2practicefrontend
+    Uncheck: Block Public Access ✅
+    Upload index.html
+    Enable Static Website Hosting:
+    Index document: index.html
+    Set Bucket Policy to allow public access:
     {
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Sid": "PublicReadGetObject",
-      "Effect": "Allow",
-      "Principal": "*",
-      "Action": "s3:GetObject",
-      "Resource": "arn:aws:s3:::ec2practicefrontend/*"
+    "Version": "2012-10-17",
+      "Statement": [
+        {
+          "Sid": "PublicReadGetObject",
+          "Effect": "Allow",
+          "Principal": "*",
+          "Action": "s3:GetObject",
+          "Resource": "arn:aws:s3:::ec2practicefrontend/*"
+        }
+      ]
     }
-    ]
-  }
 
 
 
