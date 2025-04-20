@@ -1,6 +1,10 @@
 const express = require('express');
+const cors = require('cors');
 const app = express();
 const PORT = 3000;
+
+app.use(cors());
+
 
 // Sample movies data
 const movies = [
@@ -245,6 +249,8 @@ const movies = [
     image: "https://upload.wikimedia.org/wikipedia/en/8/87/Andhadhun_poster.jpg"
   }
 ];
+
+
 
 
 const path = require('path');
