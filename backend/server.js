@@ -270,6 +270,129 @@ const movies = [
   },
 ];
 
+const colleges = [
+  {
+    "id": 1,
+    "name": "IIT Kharagpur",
+    "abbreviation": "IITKGP",
+    "location": "Kharagpur, West Bengal",
+    "established": 1951,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/IIT_Kharagpur_Main_Building.jpg/640px-IIT_Kharagpur_Main_Building.jpg"
+  },
+  {
+    "id": 2,
+    "name": "IIT Bombay",
+    "abbreviation": "IITB",
+    "location": "Mumbai, Maharashtra",
+    "established": 1958,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/IIT_Bombay_Main_Building.jpg/640px-IIT_Bombay_Main_Building.jpg"
+  },
+  {
+    "id": 3,
+    "name": "IIT Madras",
+    "abbreviation": "IITM",
+    "location": "Chennai, Tamil Nadu",
+    "established": 1959,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/IIT_Madras_Main_Entrance.jpg/640px-IIT_Madras_Main_Entrance.jpg"
+  },
+  {
+    "id": 4,
+    "name": "IIT Kanpur",
+    "abbreviation": "IITK",
+    "location": "Kanpur, Uttar Pradesh",
+    "established": 1959,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/IIT_Kanpur_Administrative_Building.jpg/640px-IIT_Kanpur_Administrative_Building.jpg"
+  },
+  {
+    "id": 5,
+    "name": "IIT Delhi",
+    "abbreviation": "IITD",
+    "location": "New Delhi, Delhi",
+    "established": 1961,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/IIT_Delhi_Main_Building.jpg/640px-IIT_Delhi_Main_Building.jpg"
+  },
+  {
+    "id": 6,
+    "name": "IIT Guwahati",
+    "abbreviation": "IITG",
+    "location": "Guwahati, Assam",
+    "established": 1994,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/IIT_Guwahati_Main_Building.jpg/640px-IIT_Guwahati_Main_Building.jpg"
+  },
+  {
+    "id": 7,
+    "name": "IIT Roorkee",
+    "abbreviation": "IITR",
+    "location": "Roorkee, Uttarakhand",
+    "established": 1847,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/IIT_Roorkee_Main_Building.jpg/640px-IIT_Roorkee_Main_Building.jpg"
+  },
+  {
+    "id": 8,
+    "name": "IIT Ropar",
+    "abbreviation": "IITRPR",
+    "location": "Rupnagar, Punjab",
+    "established": 2008,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/IIT_Ropar_Campus.jpg/640px-IIT_Ropar_Campus.jpg"
+  },
+  {
+    "id": 9,
+    "name": "IIT Bhubaneswar",
+    "abbreviation": "IITBBS",
+    "location": "Bhubaneswar, Odisha",
+    "established": 2008,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/IIT_Bhubaneswar_Main_Building.jpg/640px-IIT_Bhubaneswar_Main_Building.jpg"
+  },
+  {
+    "id": 10,
+    "name": "IIT Gandhinagar",
+    "abbreviation": "IITGN",
+    "location": "Gandhinagar, Gujarat",
+    "established": 2008,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/IIT_Gandhinagar_Campus.jpg/640px-IIT_Gandhinagar_Campus.jpg"
+  },
+  {
+    "id": 11,
+    "name": "IIT Hyderabad",
+    "abbreviation": "IITH",
+    "location": "Hyderabad, Telangana",
+    "established": 2008,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/IIT_Hyderabad_Main_Building.jpg/640px-IIT_Hyderabad_Main_Building.jpg"
+  },
+  {
+    "id": 12,
+    "name": "IIT Jodhpur",
+    "abbreviation": "IITJ",
+    "location": "Jodhpur, Rajasthan",
+    "established": 2008,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/IIT_Jodhpur_Campus.jpg/640px-IIT_Jodhpur_Campus.jpg"
+  },
+  {
+    "id": 13,
+    "name": "IIT Patna",
+    "abbreviation": "IITP",
+    "location": "Patna, Bihar",
+    "established": 2008,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/IIT_Patna_Main_Building.jpg/640px-IIT_Patna_Main_Building.jpg"
+  },
+  {
+    "id": 14,
+    "name": "IIT Indore",
+    "abbreviation": "IITI",
+    "location": "Indore, Madhya Pradesh",
+    "established": 2009,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/IIT_Indore_Campus.jpg/640px-IIT_Indore_Campus.jpg"
+  },
+  {
+    "id": 15,
+    "name": "IIT Mandi",
+    "abbreviation": "IITMD",
+    "location": "Mandi, Himachal Pradesh",
+    "established": 2009,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/IIT_Mandi_Campus.jpg/640px-IIT_Mandi_Campus.jpg"
+  }
+] 
+
 const path = require("path");
 // app.use(express.static(path.join(__dirname, '../frontend')));
 
@@ -281,6 +404,10 @@ app.get("/", (req, res) => {
 // Movies API route
 app.get("/api/movies", (req, res) => {
   res.json(movies);
+});
+
+app.get("/api/colleges", (req, res) => {
+  res.json(colleges);
 });
 
 // Bind to all interfaces
